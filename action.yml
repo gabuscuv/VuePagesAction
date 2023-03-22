@@ -1,4 +1,4 @@
-name: 'Vue to Github Pages'
+name: 'Vue to Github Pages withCustomBranches'
 branding:
   icon: 'activity'  
   color: 'blue'
@@ -10,6 +10,10 @@ inputs:
   reponame:
     description: 'Your reponame'
     required: true
+  branch:
+    description: 'Your publish branch'
+    required: false
+    default: "main"
   token:
     description: 'Your Github token'
     required: true
@@ -48,5 +52,5 @@ runs:
               git init
               git add -A
               git commit -m '${{ inputs.gitmsg }}'
-              git push -f https://${{ inputs.username }}:${{ inputs.token }}@github.com/${{ inputs.username }}/${{ inputs.reponame }}.git main
+              git push -f https://${{ inputs.username }}:${{ inputs.token }}@github.com/${{ inputs.username }}/${{ inputs.reponame }}.git ${{ inputs.branch }}
         shell: bash

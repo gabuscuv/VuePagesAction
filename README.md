@@ -45,6 +45,7 @@ jobs:
 | username |           Your username          |        -       |     ✅    |
 | reponame |       Your repository name       |        -       |     ✅    |
 |   token  | Please leave this line unchanged |        -       |     ✅    |
+| branch   |         Git branch               |      main      |     ❌    |
 | gitemail |         Git commit email         | CI@example.com |     ❌    |
 |  gitname |          Git commit name         |       CI       |     ❌    |
 |  gitmsg  |        Git commit message        |     deploy     |     ❌    |
